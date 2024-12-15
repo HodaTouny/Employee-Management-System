@@ -1,0 +1,51 @@
+.icon-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.icon-button:hover {
+    opacity: 0.7;
+    transform: scale(1.1);
+}
+
+.edit-button {
+    color: black; 
+}
+
+.delete-button {
+    color: #f6745d; 
+}
+
+.edit-button:hover {
+    color: black;
+}
+
+.delete-button:hover {
+    color: #f6745d;
+}
+table tbody tr {
+    border-bottom: 1px solid lightgray;
+}
+
+.filters input {
+    margin: 10px 15px;
+    padding: 8px 12px;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    text-align: center; 
+    width: 200px;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.filters input:first-child {
+    margin-right: 10px;
+}

@@ -1,0 +1,46 @@
+.form-container {
+    width: 60%;
+    padding: 20px;
+    border: 1px solid lightgrey;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+  
+  .form-header {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .form-label {
+    font-weight: bold;
+  }
+  
+  .form-control {
+    margin-bottom: 1rem;
+  }
+  
+  .form-submit-button {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .known-languages-label {
+    font-weight: bold;
+  }
+  
+  .language-input-group {
+    display: flex;
+    margin-bottom: 0.5rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .language-input-group .form-control {
+    margin-right: 0.5rem;
+  }
+  
+  .language-add-button-first {
+    margin-left: auto; 
+    margin-right: 10px;
+  }
+  

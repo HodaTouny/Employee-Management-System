@@ -1,0 +1,27 @@
+.navbar-custom {
+    background-color: black;
+    color: white;
+  }
+  
+  .brand-title {
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  
+  .nav-link {
+    color: white;
+    margin-right: 10px;
+    transition: color 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: #ffbdb3 !important; 
+  }
+  
+  .nav-link.active {
+    color: #ffffff !important;
+    border-bottom: #f6745d 2px solid;
+    font-weight: bold;
+  }
+  

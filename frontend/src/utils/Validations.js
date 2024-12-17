@@ -1,3 +1,5 @@
+/* validate the employee data, with the required conditions */
+
 const validateEmployee = (formData) => {
     const errors = [];
     const textOnlyRegex = /^[a-zA-Z\s]+$/;

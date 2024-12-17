@@ -1,5 +1,6 @@
 const controller = require('../controllers/controller');
 
+/* export the routes of the controller functions */
 module.exports = (app) => {
     app.get('/employees', controller.get_employees);
     app.get('/employees/language/:language/:minScore', controller.get_employees_by_language);

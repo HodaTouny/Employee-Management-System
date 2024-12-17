@@ -1,5 +1,6 @@
 import React from "react";
 
+// confirmation component used  for confirm doing an action.
 const ConfirmationModal = ({ show, message, onConfirm, onCancel }) => {
     if (!show) return null;
 

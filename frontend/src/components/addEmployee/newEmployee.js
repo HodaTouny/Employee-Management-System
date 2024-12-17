@@ -6,6 +6,7 @@ import AlertMessage from '../alert/AlertMessage';
 import validateEmployee from "../../utils/Validations";
 
 const NewEmployee = () => {
+  // use state to manage add employee form data
   const [formData, setFormData] = useState({
     FirstName: "",
     LastName: "",
@@ -15,8 +16,10 @@ const NewEmployee = () => {
       { LanguageName: "", ScoreOutof100: "" }
     ]
   });
+  // use state to manage alert
   const [alert, setAlert] = useState({ message: "", alertClass: "" });
 
+  // use state to manage input fields change -> add the new fields into the form
   const handleInputChange = (e, index) => {
     const { name, value } = e.target;
     const updatedData = { ...formData };
@@ -30,6 +33,7 @@ const NewEmployee = () => {
     setFormData(updatedData);
   };
 
+  // use srate to manage add new language
   const addLanguage = () => {
     setFormData({
       ...formData,
@@ -37,58 +41,47 @@ const NewEmployee = () => {
     });
   };
 
+  /*
+  function to handle form submission, by checking the validation and then sending the data to backend,
+  */
   const handleSubmit = async (e) => {
     e.preventDefault();
     setAlert({ message: "", alertClass: "" });
 
     const errors = validateEmployee(formData);
     if (errors.length > 0) {
-      setAlert({ message: errors.join("<br>"), alertClass: "alert-danger" });
-      return;
+        setAlert({ message: errors.join("<br/>"), alertClass: "alert-danger" });
+        return;
     }
-  
-    if (errors.length > 0) {
-      setAlert({ message: errors.join("<br>"), alertClass: "alert-danger" });
-      return;
-    }
-  
+
     try {
-      const response = await axios.post(
-        "http://localhost:5000/addEmployees",
-        formData
-      );
-      setAlert({
-        message: "Employee added successfully!",
-        alertClass: "alert-success",
-      });
-  
-      // Reset form data after successful submission
-      setFormData({
-        FirstName: "",
-        LastName: "",
-        EmployeeID: "",
-        Designation: "",
-        KnownLanguages: [{ LanguageName: "", ScoreOutof100: "" }],
-      });
+        const response = await axios.post(
+            "http://localhost:5000/addEmployees",
+            formData
+        );
+        // set the success message alert
+        setAlert({message: "Employee added successfully!",alertClass: "alert-success",});
+
+        // Reset form data to empty state after adding employee
+        setFormData({
+            FirstName: "",
+            LastName: "",
+            EmployeeID: "",
+            Designation: "",
+            KnownLanguages: [{ LanguageName: "", ScoreOutof100: "" }],
+        });
     } catch (error) {
-      setAlert({
-        message:
-          error.response?.data?.error ||
-          "Error adding employee. Please try again.",
-        alertClass: "alert-danger",
-      });
+      //set the error message alert
+        setAlert({message:error.response?.data?.error ||"Error adding employee. Please try again.", alertClass: "alert-danger",});
     }
-  };
-  
+};
 
   return (
     <div className="d-flex justify-content-center align-items-center mb-5 mt-5">
       <form onSubmit={handleSubmit} className="form-container">
         <h1 className="form-header">New Employee</h1>
-
-        {/* Show alert if message exists */}
+        {/* Alert message container*/}
         {alert.message && <AlertMessage message={alert.message} alertClass={alert.alertClass} />}
-
         <div className="mb-3">
           <label htmlFor="FirstName" className="form-label">First Name</label>
           <input

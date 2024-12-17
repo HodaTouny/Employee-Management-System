@@ -49,3 +49,22 @@ table tbody tr {
 .filters input:first-child {
     margin-right: 10px;
 }
+
+.language-score-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.language-score-row label {
+    min-width: 80px;
+}
+
+.edit-form input {
+    padding: 8px;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    width: 150px;
+}
+

@@ -1,6 +1,8 @@
 import React from "react";
+
+/* search component get the search query and onSearchChange function which 
+will be called when the user types in the search bar*/
 const Search = ({ searchQuery, onSearchChange}) => {
-    
     return (
         <div className="container d-flex justify-content-center">
             <input

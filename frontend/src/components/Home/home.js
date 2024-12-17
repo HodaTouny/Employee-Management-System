@@ -2,7 +2,7 @@ import React from "react";
 import "../../libraries/bootstrap.min.css";
 import "../../assets/home.png"; 
 
-
+//Home component used for home page
 const Home = () => {
     return (
         <div className="d-flex align-items-center justify-content-between p-5" style={{ height: "80vh" }}>
@@ -18,6 +18,7 @@ const Home = () => {
                     src={require("../../assets/home.png")}
                     alt="Employee Management"
                     style={{ width: "100%", borderRadius: "15px" }}
+                    loading="lazy"
                 />
             </div>
         </div>

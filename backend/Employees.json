@@ -20,7 +20,7 @@
     ]
   },
   {
-    "FirstName": "John",
+    "FirstName": "Jimy",
     "LastName": "Adamo",
     "EmployeeID": 2000,
     "Designation": "developer",
@@ -31,47 +31,39 @@
       },
       {
         "LanguageName": "Java",
-        "ScoreOutof100": "100"
+        "ScoreOutof100": "7"
       },
       {
         "LanguageName": "C++",
         "ScoreOutof100": 70
-      }
-    ]
-  },
-  {
-    "FirstName": "Maya",
-    "LastName": "Touny",
-    "EmployeeID": "2003",
-    "Designation": "Software Engineer",
-    "KnownLanguages": [
-      {
-        "LanguageName": "java",
-        "ScoreOutof100": "99"
-      }
-    ]
-  },
-  {
-    "FirstName": "hoda",
-    "LastName": "Touny",
-    "EmployeeID": "2009",
-    "Designation": "Software Engineer",
-    "KnownLanguages": [
+      },
       {
         "LanguageName": "python",
-        "ScoreOutof100": "78"
+        "ScoreOutof100": "33"
       }
     ]
   },
   {
     "FirstName": "Mira",
     "LastName": "Mohammed",
-    "EmployeeID": "20002",
-    "Designation": "TA",
+    "EmployeeID": "2222",
+    "Designation": "Tester",
     "KnownLanguages": [
       {
-        "LanguageName": "C++",
-        "ScoreOutof100": "30"
+        "LanguageName": "python",
+        "ScoreOutof100": "90"
+      }
+    ]
+  },
+  {
+    "FirstName": "Maya",
+    "LastName": "Touny",
+    "EmployeeID": "20004",
+    "Designation": "Software Engineer",
+    "KnownLanguages": [
+      {
+        "LanguageName": "java",
+        "ScoreOutof100": "22"
       }
     ]
   }

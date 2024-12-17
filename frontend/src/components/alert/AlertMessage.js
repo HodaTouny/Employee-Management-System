@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import '../../libraries/bootstrap.min.css';
 
+
+// create the alert component & make it visible for 5 seconds then automatically hide
 const AlertMessage = ({ message, alertClass }) => {
   const [isVisible, setIsVisible] = useState(true);
 
